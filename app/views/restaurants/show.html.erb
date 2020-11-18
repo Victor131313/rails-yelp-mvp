@@ -1,0 +1,25 @@
+
+<div class="text-center">
+<div class="row">
+<div class="col-4">
+<h1>show</h1>
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :phone_number %>
+  <%= f.submit "Submit review", class: "btn btn-secondary form-control" %>
+<% end %>
+
+
+<p><%= link_to "Delete #{@restaurant.name}",
+            restaurant_path(@restaurant),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+</p>
+
+
+
+</div>
+</div>
+</div>      

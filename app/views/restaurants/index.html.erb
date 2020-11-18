@@ -1,0 +1,9 @@
+
+<div class="text-center">
+<h1>INDEX</h1>
+<% @restaurants.each do |restaurant| %>
+<li><%= restaurant.name %></li><%= link_to "edit", restaurant_path(restaurant) %>
+<% end %>
+<button class ="btn btn-medium"><%= link_to "add",new_restaurant_path %></button>
+</div>
+ 
